@@ -1,0 +1,625 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+:root{
+    /* Color */
+    --body-color: #FFFFFF;
+    --red-color: #FF6D60;
+    --yellow-color: #F7D060;
+    --green-color: #98D8AA;
+    --text-color:#000000;
+    --shadow-color: rgba(0, 0, 0, 0.214);
+
+    /* transition */
+    --tran-01: all 0.1s ease;
+    --tran-02: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.4s ease;
+    --tran-05: all 0.5s ease;
+
+
+
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    height: 100vh;
+    background: var(--body-color);
+    transition: var(--tran-04);
+    
+}
+
+
+/* Navbar
+================================================= */
+a{
+    text-decoration: none;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    z-index: 1000; /* Menetapkan indeks-z untuk memastikan navbar tetap di atas konten */
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.599);
+    backdrop-filter: blur(15px);
+    border-radius: 0px 0px 30px 0px;
+}
+
+
+.logo img {
+    width: 100%;
+    margin-left: 15px;
+    max-height: 30px;
+}
+.con-nav-prof{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--body-color);
+    box-shadow: 0 2px 4px var(--shadow-color);
+    padding: 20px;
+    margin-right: 40px;
+    border-radius: 0px 0px 30px 30px;
+}
+
+.nav-links{
+    margin: 0;
+    gap: 0;
+}
+.nav-links a {
+    text-decoration: none;
+    color: var(--primary-color-light);
+    transition: var(--tran-02);
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: 500;
+    border-radius: 20px;
+}
+.nav-links a:hover{
+    background-color: var(--primary-color);
+    color: var(--primary-color-light);
+}
+
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.line {
+    width: 25px;
+    height: 3px;
+    background-color: var(--primary-color-light);
+    margin: 3px 0;
+}
+.drop-prof{
+    display: none;
+}
+.profile{
+    margin-right: 30px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 50%;
+}
+.profile a{
+    font-weight: 700;
+    color: var(--primary-color-light);
+}
+.profile img{
+    padding: 10px;
+    width: 9%;
+    margin-left: 10px;
+    border-radius: 100px;
+}
+#a-hijau:hover{
+    background-color: var(--green-color);
+    color: var(--body-color);
+}
+#a-merah:hover{
+    background-color: var(--red-color);
+    color: var(--body-color);
+}
+
+#a-kuning:hover{
+    background-color: var(--yellow-color);
+    color: var(--body-color);
+}
+
+
+/* ... CSS Anda yang sudah ada ... */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  .profile button{
+    color: var(--primary-color-light);
+    margin-left: 10px;
+  }
+  .dropbtn {
+    background: none;
+    font-size: 13px;
+    border: none;
+    cursor: pointer;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 190px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+
+@media screen and (max-width: 768px) {
+    
+    .navbar .line{
+        background-color: var(--text-color);
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #dddfdd;
+        position: absolute;
+        top: 0px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+    }
+    .nav-links a{
+        color: var(--text-color);
+        border-radius: 0px;
+    }
+    .logo-text a {
+        color: var(--text-color);
+    }
+    .nav-links.active {
+        display: flex;
+        background-color: var(--body-color);
+        width: 80%;
+        border-radius: 0px 0px 50px 0px ;
+    }
+    .con-nav-prof{
+        margin-top: 20px;
+        margin-right: 0px;
+        border-radius: 30px 0px 0px 30px;
+    }
+    .burger {
+        display: flex;
+        z-index: 999;
+    }
+    #a-kuning{
+        border-radius: 0px 0px 50px 0px;
+    }
+
+
+}
+/* Navbar end
+================================================= */
+
+/* Thumnail 
+================================================= */
+.thumnail{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+.image-thumnail {
+    margin-top: 100px;
+}
+
+.bg-gambar1 p,
+.bg-gambar2 p{
+    opacity: 0;
+}
+.bg-gambar1{
+    position: absolute;
+    background-color: var(--yellow-color);
+    top: 25%;
+    width: 50%;
+    height: 200px;
+    z-index: -999;
+    border-radius: 0px 100px 100px 0px;
+}
+.bg-gambar2{
+    background-color: var(--red-color);
+    top: 58%;
+    height: 100px;
+    width: 55%;
+    position: absolute;
+    z-index: -998;
+    border-radius: 0px 100px 100px 0px;
+}
+.text-thumnail{
+    width: 45%;
+    margin-left: 170px;
+    margin-right: 40px;
+    margin-bottom: 50px;
+}
+.text-thumnail .judul{
+    font-size: 40px;
+    font-weight: 700;
+}
+.text-thumnail p{
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+.a-container{
+    display: flex;
+    justify-content: end;
+}
+.text-thumnail a{
+    background-color: var(--green-color);
+    color: var(--body-color);
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 900px){
+    .bg-gambar1{
+        top: 15%;
+        width: 80%;
+        height: 200px;
+    }
+    .bg-gambar2{
+        top: 40%;
+        height: 100px;
+        width: 95%;
+    }
+    .image-thumnail img{
+        margin-left: 50px;
+    }
+    .thumnail{
+        display: flex;
+        flex-direction: column;
+    }
+    .text-thumnail{
+        width: 100%;
+        margin-left: 0px;
+        text-align: center;
+        margin: 10px;
+        margin-right: 0px;
+    }
+    .a-container{
+        display: flex;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 768px){
+    .image-thumnail img{
+        margin-left: 10px;
+    }
+    .text-thumnail a{
+        margin-left: 0px;
+    }
+}
+
+/* Thumnail end
+================================================= */
+
+/* Form 
+================================================= */
+.form-container{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    margin-top: 40px;
+    background-color: #E8F6EF;
+}
+form{
+    background-color: var(--body-color);
+    border-radius: 20px;
+    width: 30%;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+form h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+h5{
+    margin-bottom: 10px;
+    font-style: italic;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+}
+.form-checkbox{
+    flex-direction: row-reverse;
+    justify-content: start;
+    align-items: center;
+}
+input{
+    background-color: var(--body-color);
+    border: none;
+    border-bottom: 2px solid var(--red-color);
+    height: 30px;
+}
+input:focus{
+    outline: none;
+}
+table{
+    border-collapse: collapse;
+    border: 2px solid black;
+}
+.table-sedang{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.table-sedang tr th{
+    padding: 10px;
+}
+.table-sedang tr td{
+    padding: 10px;
+    border: 2px solid black;
+}
+#btn-submit{
+    width: 100%;
+    background-color: var(--red-color);
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    color: var(--body-color);
+    font-weight: 700;
+    margin-top: 10px;
+}
+.btn-done{
+    background-color: var(--body-color);
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin: 2px;
+    color: var(--green-color);
+    font-weight: 700;
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+.btn-delete{
+    background-color: var(--body-color);
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin: 2px;
+    color: var(--red-color);
+    font-weight: 700;
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+.table-sudah{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.table-sudah table{
+    width: 50%;
+}
+.table-sudah tr th{
+    padding: 10px;
+}
+.table-sudah tr td{
+    padding: 8px;
+    border: 2px solid black;
+}
+
+
+@media screen and (max-width: 900px){
+
+    .form-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .form-container h1{
+        text-align: center;
+    }
+
+    tr th{
+        font-size: 13px;
+        text-align: center;
+    }
+    tr td{
+        padding: 0px;
+        font-size: 13px;
+        text-align: center;
+        padding: 10px;
+    }
+    form{
+        width: 80%;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .btn-done,
+    .btn-delete{
+        font-size: 10px;
+        padding: 9px ;
+    }
+}
+/* Form end
+================================================= */
+
+/* Popup 
+================================================= */
+#showPopupButton{
+    background-color: var(--green-color);
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: var(--body-color);
+}
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+.popup-judul{
+    font-size: 25px;
+    font-weight: 700;
+}
+.popup p{
+    margin-top: 20px;
+}
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--body-color);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 100%;
+    max-width: 80%; /* Lebar maksimum popup */
+    max-height: 80%; /* Tinggi maksimum popup */
+    overflow: auto; /* Tampilkan scrollbar jika kontennya terlalu besar */
+}
+
+.closePopup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+.by a{
+    color: #0F9D58;
+    text-decoration: underline;
+}
+/* Tambahkan gaya responsif */
+@media (max-width: 768px) {
+    .popup-content {
+        max-width: 90%;
+        max-height: 90%;
+    }
+}
+
+/* Popup end
+================================================= */
+
+/* footer
+================================================= */
+
+.footer {
+    background-color: rgba(235, 235, 235, 0.8);
+    color: var(--text-color);
+    padding: 20px;
+    text-align: center;
+    margin-top: 200px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.footer-logo img {
+    width: 15%;
+    margin-right: 10px;
+}
+
+.footer-logo span {
+    font-weight: bold;
+}
+
+.footer-credit {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 17px
+}
+.footer-credit a{
+    margin: 15px;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: var(--tran-03);
+    padding: 10px 20px 10px 20px;
+    border-radius: 20px;
+}
+
+
+.footer-credit #ig:hover{
+    background-color: #F11A7B;
+    color: var(--body-color);
+}
+.footer-credit #github:hover{
+    background-color: #252525;
+    color: var(--body-color);
+}
+
+.footer-copyright {
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    text-align: center;
+}
+.logo-text {
+    text-align: center;
+    display: flex;
+    align-items: end;
+    color: var(--primary-color-light);
+}
+
+@media screen and (max-width: 768px) {
+    .footer-logo {
+        flex-direction: column;
+    }
+
+    .footer-logo img {
+        margin-right: 0;
+        margin-bottom: 5px;
+        width: 50%;
+    }
+    .footer-credit {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5px;
+    }
+}
+
+/* footer end
+================================================= */

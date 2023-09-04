@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="asset/logo NEO ONE.png" type="icon/x">
+    <link rel="stylesheet" href="style.css">
+    <title>Book Shelf Reading List</title>
+</head>
+<body>
+<div class="nav-container">
+    <nav class="navbar">
+        <div class="logo">
+            <img src="./asset/neoone-logo-properties.png" alt="">
+            
+        </div>
+        <div class="con-nav-prof">
+            <div class="nav-links">
+                <a href="#add-book" id="a-hijau">Tambah Bacaan</a>
+                <a href="#list-read" id="a-merah">List Bacaan</a>
+                <a href="#done-read" id="a-kuning">Sudah Dibaca</a>         
+            </div>
+            <div class="burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="bg-gambar1"><p>.</p></div>
+<div class="bg-gambar2"><p>.</p></div>
+
+<div class="thumnail" id="add-book">
+    <div class="image-thumnail">
+        <img src="asset/thumnail-buku.png" alt="">
+    </div>
+    <div class="text-thumnail">
+        <span class="judul">Punya Banyak Buku? Pengen Punya List Bacaan?</span>
+        <p>Sekarang kamu bisa isi list bacaan buku favoritmu disini dengan tampilan yang simple.</p>
+        <div class="a-container">
+            <button id="showPopupButton">Selengkapnya</button>
+        </div>
+    </div>
+</div>
+
+<div class="form-container" id="list-read">
+    <form action="" id="inputBookForm">
+        <h1>Masukan Buku Baru</h1>
+        <div class="form-group">
+            <label for="">Judul Buku</label>
+            <input type="text" id="judulBuku">
+        </div>
+        <div class="form-group">
+            <label for="">Penulis</label>
+            <input type="text" id="penulisBuku"> 
+        </div>
+        <div class="form-group">
+            <label for="">Tanggal</label>
+            <input type="date" id="tanggalBaca">
+        </div>
+        <div class="form-group form-checkbox">
+            <label for="">Sudah dibaca?</label>
+            <input type="checkbox" id="sudahDibaca">
+        </div>
+        <button type="submit" id="btn-submit">Tambah</button>
+    </form>
+
+    <div class="table-sedang">
+        <h1>Sedang dibaca</h1>
+        <h5>Ceklis "✔️" jika sudah selesai membaca</h5>
+        <table id="sedangDibacaTable">
+            <thead>
+                <tr>
+                    <th>Judul</th>
+                    <th>Penulis</th>
+                    <th>Tanggal</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>    
+    </div>
+
+</div>
+
+<div class="table-sudah" id="done-read">
+    <h1>Sudah dibaca</h1>
+    <table id="sudahDibacaTable">
+        <thead>
+            <tr>
+                <th>Judul</th>
+                <th>Penulis</th>
+                <th>Awal Baca</th>
+                <th>Selesai Baca</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+</div>
+
+<!-- Popup -->
+<div class="popup" id="popup">
+    <div class="popup-content">
+        <span class="closePopup" onclick="closePopup()">&times;</span>
+        <div id="popupDetail"></div>
+        <span class="popup-judul">Petunjuk Pengguna</span>
+        <p>Anda bisa menambahkan judul buku menjadi list bacaan Anda saat ini yang berguna
+            untuk Anda yang memiliki hobi membaca sehingga, kini Anda memliki daftar bacaan
+            mana yang akan Anda baca terlebih dahulu. Terdapat juga fitur dimana Anda bisa 
+            melihat tanggal berapa Anda memulai membaca dan selesai membaca dengan menekan
+            tombol "✔️" dan data Anda selesai membaca akan tampil. Anda juga dapat menghapus
+            buku yang Anda ingin hilangkan dari list bacaan.
+        </p>
+        <p class="by"><a href="https://github.com/NeoOne-Team">by: Neo One Project Properties</a></p>
+    </div>
+</div>
+
+
+ <footer class="footer">
+    <div class="footer-logo">
+        <img src="./asset/neoone-logo-properties.png" alt="Logo">
+        <div class="logo-text">
+        </div>
+    </div>
+    <div class="footer-credit">
+        <a href="https://www.instagram.com/neo1.indonesia/" id="ig"><i class='bx bxl-instagram' ></i> Instagram</a>
+        <a href="https://github.com/saka-C" id="github"><i class='bx bxl-github'></i> Creator Github</a>
+        <a href="https://github.com/NeoOne-Team" id="github"><i class='bx bxl-github'></i> Community Team Github</a>
+    </div>
+</footer>
+<div class="footer-copyright">
+    <p>© 2023 Neo One Project Properties. All rights reserved.</p>
+</div>
+
+<script src="script.js"></script>
+<script>
+
+
+</script>
+</body>
+</html>
+
+
